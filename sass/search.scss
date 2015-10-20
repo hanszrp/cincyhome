@@ -1,0 +1,19 @@
+////////SEARCH/////////
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+#search{
+   width:300px;
+   display: inline;
+   margin-top: 1em;
+   padding-left: 2em;
+
+}
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  position: relative;
+  // top: -43px;
+  right: 290px;
+  top:1px;
+  font-size: 1.25em;
+  z-index: 2;
+  color:#333;
+}

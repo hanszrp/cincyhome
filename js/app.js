@@ -4,7 +4,7 @@ $( document ).ready(function() {
 	console.log( "ready!" );
 	$('#start').on("click",function(){
 		console.log('click');
-		$('.hero-inner').css('opacity','0');
+		$('.hero-inner').animate({opacity : 0},100);
 		$('.hero').css('background-color','#F1F1F1');
 		$('.hero-inner').slideToggle();
 		$('.cards').fadeToggle('fast', function(){

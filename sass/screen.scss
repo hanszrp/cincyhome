@@ -4,16 +4,16 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
  @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+ @import url(http://weloveiconfonts.com/api/?family=entypo);
  @import "compass/reset";
  @import "bourbon/bourbon";
  @import "neat/neat";
  @import "base/base";
-
-
+ @import "search.scss";
 
 //////VARIABLES//////
 $large-screen: em(860) !default;
-$medium-screen: em(775px) !default;
+$medium-screen: em(600px) !default;
 $hero-color: #C9441E; 
 $text-color: #525762;
 $blue: #1E87C9;
@@ -205,7 +205,12 @@ header.navigation {
   	z-index: 9999999;
   	position: relative;
   		left: 2.5em;
-
+  	@include media ($medium-screen){
+  		left: -11.5em;
+  	}
+  	@include media ($large-screen){
+  		left:-.5em;
+  	}
   	@include media ($horizontal-bar-mode) {
   		float: right;
 
@@ -610,7 +615,7 @@ header.navigation {
 	background-color: $background-color;
 	@include outer-container();
 	.img-container{
-		@include media($large-screen) {
+		@include media($medium-screen) {
 			@include span-columns(6);
 		}
 		@include span-columns(12);
@@ -619,7 +624,7 @@ header.navigation {
 
 	}
 	.text-container{
-		@include media($large-screen) {
+		@include media($medium-screen) {
 			@include span-columns(6);
 		}
 		@include span-columns(12);
@@ -627,7 +632,6 @@ header.navigation {
 		color:$hero-color;
 		height:100%;
 		h2{
-			text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 			font-weight: 200;
 			font-family: $heading-font-family;
 		}
@@ -1156,6 +1160,28 @@ header.navigation {
 }
 
 // Based on code by Kasper Mikiewicz
+
+/////SEARCH//////
+////////SEARCH/////////
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+#search{
+	margin-left: 1em;
+	margin-bottom: 0;
+	height:44px;
+	width:300px;
+	display: inline;
+	margin-top: 1em;
+	padding-left: 2em;	
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  font-size: 1.25em;
+  z-index: 2;
+  color:#333;
+}
+
+
 
 
 
